@@ -1,0 +1,164 @@
+body{
+    font-family: Inter;
+    background-color: rgb(220, 220, 220);
+    color : rgb(71, 71, 168);
+    margin-left: 200px;
+    margin-right: 200px;
+    font-size: medium;
+    text-align: justify;
+}
+p{
+    text-decoration: solid;
+}
+
+a:link{
+    color:rgb(47, 16, 56);
+    text-decoration: none;
+}
+a:hover{
+    color:rgb(196, 150, 25);
+    text-decoration: solid;
+    font-weight: bold;
+}
+a:visited{
+    color:rgb(47, 16, 56);
+    text-decoration: none;
+}
+
+.kalimatpembuka{
+    font-size: larger;
+    border: chocolate;
+    border-radius: 50px;
+}
+
+.container{
+    perspective: 500px;
+}
+.divx{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: rgb(182, 194, 228);
+    border: 2px solid rgb(25, 25, 110);
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: 3s;
+}
+.divx:hover{
+    transform: rotateX(360deg);
+}
+.divy{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: rgb(182, 194, 228);
+    border: 2px solid rgb(25, 25, 110);
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: 3s;
+}
+.divy:hover{
+    transform: rotateY(360deg);
+}
+
+.container3d{
+    animation: rotate-cube 20s infinite linear;
+    transform-style: preserve-3d;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.cub{
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.side{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.front.side{
+    background-color: hsl(264, 4%, 52%);
+    transform: translateZ(50px);
+}
+.back.side{
+    background-color: hsl(264, 4%, 52%);
+    transform: translateZ(-50px);
+}
+.right.side{
+    background-color: hsl(264, 4%, 52%);
+    transform: translateX(50px) rotateY(90deg);
+}
+.left.side{
+    background-color: hsl(264, 4%, 52%);
+    transform: translateX(-50px) rotateY(-90deg);
+}
+.top.side{
+    background-color: hsl(264, 4%, 52%);
+    transform: translateY(-50px) rotateX(90deg);
+}
+.bottom.side{    
+    background-color: hsl(264, 4%, 52%);
+    transform: translateY(50px) rotateX(-90deg);
+}
+@keyframes rotate-cube{
+    0% {transform: rotateX(20deg) rotateY(20deg);}
+    25% {transform: rotateX(-20deg) rotateY(20deg);}
+    50% {transform: rotateX(-20deg) rotateY(-20deg);}
+    75% {transform: rotateX(20deg) rotateY(-20deg);}
+    100% {transform: rotateX(20deg) rotateY(20deg);}
+}
+
+
+.divx, .divy {
+    padding: 20px;
+    color: white;
+}
+/* Extra small devices (max-width 600px) */
+@media only screen and (max-width: 600px) {
+    .divx, .divy {
+        background-color: rgb(179, 62, 62);
+        font-size: 14px;
+        border: 2px solid white;
+    }
+}
+/* Small devices (601px - 767px) */
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    .divx, .divy {
+        background-color: rgb(52, 147, 52);
+        font-size: 16px;
+        border: 2px dashed white;
+    }
+}
+/* Medium devices (768px - 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .divx, .divy {
+        background-color: rgb(52, 52, 200);
+        font-size: 18px;
+        border: 2px dotted white;
+    }
+}
+/* Large devices (992px - 1199px) */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .divx, .divy {
+        background-color: rgb(240, 176, 57);
+        font-size: 20px;
+        border: 3px solid white;
+    }
+}
+/* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .divx, .divy {
+        background-color: rgb(251, 162, 177);
+        font-size: 22px;
+        border: 3px double white;
+    }
+}
