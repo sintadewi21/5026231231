@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Route;
 //tambahin use buat coba.php tadi
 use App\Http\Controllers\Coba;
 
+use App\Http\Controllers\PegawaiController;
+//ini buat controller pegawai
+
+use App\Http\Controllers\BlogController;
+//ini buat controller blog
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -94,3 +100,16 @@ Route::get('ets', function () {
 Route::get('frontend', function () {
     return view('frontend');
 });
+
+Route::get('dosen', [Coba::class, 'index']);
+
+Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+
+
+Route::get('/formulir', [PegawaiController::class, 'formulir']); //halaman isian formulir
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']); //redirect atau action form. diisni juga di encript dengan memanggil route nya pake Route::post
+
+// route blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
