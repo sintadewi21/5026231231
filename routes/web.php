@@ -13,6 +13,10 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 //ini buat controller blog
 
+use App\Http\Controllers\PegawaiDBController;
+//ini buat controller pegawai database
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -82,8 +86,8 @@ Route::get('js2', function () {
 });
 
 //index
-Route::get('index', function () {
-    return view('index');
+Route::get('danantara', function () {
+    return view('danantara');
 });
 
 //linktree
@@ -103,7 +107,7 @@ Route::get('frontend', function () {
 
 Route::get('dosen', [Coba::class, 'index']);
 
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+//Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 
 
 Route::get('/formulir', [PegawaiController::class, 'formulir']); //halaman isian formulir
@@ -113,3 +117,22 @@ Route::post('/formulir/proses', [PegawaiController::class, 'proses']); //redirec
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+
+//INI MULAI MYSQL, route buat pegawai
+Route::get('/pegawai', [PegawaiDBController::class, 'index']);
+
+//route input pegawai
+Route::get('/pegawai/tambah',[PegawaiDBController::class, 'tambah']);
+
+//route store
+Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
+
+//route edit pegawai
+Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
+
+//route update pegawai
+Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
+
+//route hapus pegawai
+Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
