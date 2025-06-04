@@ -136,3 +136,9 @@ Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 
 //route hapus pegawai
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+
+//route cari pegawai
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+//route proses
+Route::post('/pegawai/proses', [PegawaiDBController::class, 'proses']);
