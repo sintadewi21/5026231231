@@ -16,6 +16,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 //ini buat controller pegawai database
 
+use App\Http\Controllers\PenggarisController;
+//ini buat controller penggaris
 
 /*
 |--------------------------------------------------------------------------
@@ -142,3 +144,12 @@ Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 
 //route proses
 Route::post('/pegawai/proses', [PegawaiDBController::class, 'proses']);
+
+//route tugas pertemuan 14 tabel penggaris
+Route::get('/penggaris', [PenggarisController::class, 'indexpenggaris']);
+Route::get('/penggaris/caripenggaris', [PenggarisController::class, 'caripenggaris']);
+Route::get('/penggaris/tambahpenggaris', [PenggarisController::class, 'tambahpenggaris']);
+Route::post('/penggaris/storepenggaris', [PenggarisController::class, 'storepenggaris']);
+Route::get('/penggaris/editpenggaris/{id}', [PenggarisController::class, 'editpenggaris']);
+Route::post('/penggaris/updatepenggaris', [PenggarisController::class, 'updatepenggaris']);
+Route::get('/penggaris/hapuspenggaris/{id}', [PenggarisController::class, 'hapuspenggaris']);

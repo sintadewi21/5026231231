@@ -27,13 +27,13 @@
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a> <!-- arah routenya ke frontend, nnti arahin kesana, jangan lupa di edit -->
+                <a class="nav-link" href="/frontend">All Front End</a> <!-- arah routenya ke frontend, nnti arahin kesana, jangan lupa di edit -->
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pegawai">Pegawai</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
+                <a class="nav-link" href="/penggaris">Tugas CRUD</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">EAS</a>

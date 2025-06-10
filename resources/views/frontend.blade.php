@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('template')
+
+@section('content')
 <head>
     <meta charset="UTF-8">
     <title>Kumpulan Link Frontend</title>
@@ -44,7 +45,7 @@
         }
     </style>
 </head>
-<body class="py-5">
+<body>
 
 <div class="container">
     <div class="text-center mb-5">
@@ -70,7 +71,7 @@
                 'bootstrap2' => ['icon' => 'bi-bootstrap-fill', 'desc' => 'Latihan lanjutan Bootstrap 2'],
                 'js1' => ['icon' => 'bi-calculator', 'desc' => 'Membuat fungsi perhitungan dengan JavaScript'],
                 'js2' => ['icon' => 'bi-shield-check', 'desc' => 'Form validation dengan JavaScript'],
-                'index' => ['icon' => 'bi-house-door', 'desc' => 'Memperbarui website Danantara'],
+                'danantara' => ['icon' => 'bi-house-door', 'desc' => 'Memperbarui website Danantara'],
                 'linktree' => ['icon' => 'bi-link-45deg', 'desc' => 'Cloning Linktree menggunakan Bootstrap'],
                 'ets' => ['icon' => 'bi-building', 'desc' => 'ETS dengan topik Company Profile'],
             ];
@@ -90,6 +91,4 @@
         @endforeach
     </div>
 </div>
-
-</body>
-</html>
+@endsection
