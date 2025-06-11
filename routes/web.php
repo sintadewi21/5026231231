@@ -19,6 +19,8 @@ use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\PenggarisController;
 //ini buat controller penggaris
 
+use App\Http\Controllers\KeranjangBelanjaController;
+//ini buat controller keranjang belanja
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -153,3 +155,10 @@ Route::post('/penggaris/storepenggaris', [PenggarisController::class, 'storepeng
 Route::get('/penggaris/editpenggaris/{id}', [PenggarisController::class, 'editpenggaris']);
 Route::post('/penggaris/updatepenggaris', [PenggarisController::class, 'updatepenggaris']);
 Route::get('/penggaris/hapuspenggaris/{id}', [PenggarisController::class, 'hapuspenggaris']);
+
+//route tugas pertemuan 15 keranjangbelanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'indexkeranjangbelanja']);
+Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'belikeranjangbelanja']);
+Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
+Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
+Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
