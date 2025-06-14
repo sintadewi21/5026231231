@@ -21,6 +21,11 @@ use App\Http\Controllers\PenggarisController;
 
 use App\Http\Controllers\KeranjangBelanjaController;
 //ini buat controller keranjang belanja
+
+use App\Http\Controllers\PageCounterController;
+//ini buat controller page counter
+
+use App\Http\Controllers\KaryawanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -162,3 +167,15 @@ Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaContr
 Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
 Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
 Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
+
+
+//route latihan 2 pagecounter
+Route::get('/pagecounter', [PageCounterController::class, 'show']);
+
+//route latihan 3 karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/edit/{kp}', [KaryawanController::class, 'edit']);
+Route::post('/karyawan/update', [KaryawanController::class, 'update']);
+Route::get('/karyawan/hapus/{kp}', [KaryawanController::class, 'hapus']);
